@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@android:color/black"
+            android:theme="@style/AppTheme">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|right">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="@string/app_name"
+                        android:id="@+id/toolbar_title"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:foregroundGravity="left" />
+                    <ImageView
+                        android:id="@+id/iv_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_share"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_weight="0" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:hint="Capital inicial (Ex.: R$1000)"
+            android:id="@+id/capinicial"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:hint="Taxa de juros (Ex.: 0.9%/mês)"
+                android:id="@+id/txjuros"
+                android:layout_weight="0.9"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_gravity="center_horizontal"
+                android:hint="Período (Ex.: 60 meses)"
+                android:id="@+id/periodo"
+                android:layout_weight="0.9" />
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center_horizontal"
+            android:hint="Acréscimo periódico (Ex.: R$1000/mês)"
+            android:id="@+id/mensal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/montante"/>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-6303877676651382/7447288957"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp">
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+</ScrollView>
